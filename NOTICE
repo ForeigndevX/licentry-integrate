@@ -1,0 +1,31 @@
+Licentry integration plugin
+Copyright 2026 Licentry
+
+This product includes software developed for Licentry (https://licentry.cc).
+
+Licensed under the Apache License, Version 2.0. You may not use these files
+except in compliance with that Licence. A copy is in the LICENSE file beside
+this one, and the canonical text is at:
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+WHAT THIS PLUGIN IS, for anyone reading the licence before the README.
+
+It is a set of instructions and reference material for an AI coding agent. It
+contains no compiled software and no runtime. It reads Licentry's published
+documentation over HTTPS, reads the repository it is pointed at, and writes
+integration code into that repository.
+
+It sends nothing to Licentry beyond ordinary requests for public documentation
+pages. The source it reads goes to whichever AI provider the agent running it
+already uses, under whatever agreement the operator has with that provider.
+Licentry is not a party to that and receives none of it.
+
+Code this plugin writes into a product carries a separate, perpetual licence
+described in section 8 of the Licentry terms of service at
+https://licentry.cc/terms. That licence does not expire with a subscription,
+deliberately, because generated code ships inside binaries that outlive it.
+
+Installing this plugin does not create a Licentry account and does not grant
+access to anything behind a sign in, including the hardening guide it points
+at, which stays tied to a vendor account.
