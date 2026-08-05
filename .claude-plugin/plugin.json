@@ -1,0 +1,22 @@
+{
+  "name": "licentry-integrate",
+  "version": "0.1.0",
+  "description": "Integrate Licentry licensing correctly without reading the documentation first. Seven commands that read the live docs, survey your codebase, write the client, turn the product controls on in a safe order, and refuse to pass an integration that fails open.",
+  "author": {
+    "name": "Licentry",
+    "email": "support@licentry.cc",
+    "url": "https://licentry.cc"
+  },
+  "homepage": "https://licentry.cc/docs",
+  "repository": "https://github.com/ForeigndevX/licentry-integrate",
+  "license": "Apache-2.0",
+  "keywords": [
+    "licensing",
+    "licence",
+    "anti-piracy",
+    "tamper-resistance",
+    "device-binding",
+    "dpop",
+    "licentry"
+  ]
+}

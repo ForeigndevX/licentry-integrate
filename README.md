@@ -36,7 +36,7 @@ integration that misses one of the six.
 From the marketplace:
 
 ```
-/plugin marketplace add licentry/licentry-integrate
+/plugin marketplace add ForeigndevX/licentry-integrate
 /plugin install licentry-integrate@licentry
 ```
 

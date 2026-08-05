@@ -24,14 +24,15 @@ updated, not the vendor's assumptions.
 ```json
 {
   "manifestVersion": 1,
-  "docsRevision": "2026-08-04.1",
+  "docsRevision": "a1b2c3d4e5f6",
   "baseUrl": "https://licentry.cc",
   "support": "support@licentry.cc",
   "plugin": {
     "latestVersion": "0.1.0",
     "minSupportedVersion": "0.1.0",
-    "marketplace": "https://github.com/licentry/licentry-integrate",
-    "notes": "https://licentry.cc/docs"
+    "marketplace": "https://github.com/ForeigndevX/licentry-integrate",
+    "notes": "https://github.com/ForeigndevX/licentry-integrate/releases",
+    "licence": "Apache-2.0"
   },
   "pages": [
     {
@@ -40,7 +41,7 @@ updated, not the vendor's assumptions.
       "url": "https://licentry.cc/docs",
       "covers": "Quickstart, the session endpoints and their exact fields, response signature verification, DPoP, offline grace, device binding, the product controls, the failure table and the launch checklist.",
       "access": "public",
-      "revision": "2026-08-04.1",
+      "revision": "0123456789ab",
       "requiredBy": ["setup", "implement", "harden", "verify", "audit", "debug"],
       "mustContain": ["Launch checklist", "X-Licentry-Sig"],
       "sections": [
@@ -51,8 +52,21 @@ updated, not the vendor's assumptions.
           "covers": "The four calls, and the six rules that fail silently."
         }
       ]
+    },
+    {
+      "id": "terms",
+      "title": "Terms of service",
+      "url": "https://licentry.cc/terms",
+      "covers": "The contract between Licentry and the vendor, including the perpetual licence to code this plugin writes into the product.",
+      "access": "public",
+      "revision": null,
+      "revisionNote": "rendered from an Astro page rather than a content file, so it is not hashed here",
+      "requiredBy": [],
+      "mustContain": ["Acceptable use", "Disclaimers"],
+      "sections": []
     }
-  ]
+  ],
+  "warnings": []
 }
 ```
 
@@ -68,6 +82,8 @@ Field by field:
 | `pages[].covers` | What the page holds, so a command can pick the pages it needs without fetching all of them. |
 | `pages[].access` | `public`, or `vendor-session` for a page behind the dashboard sign-in. |
 | `pages[].revision` | Per page, so `/check-for-updates` can name what changed instead of saying "something did". |
+| `pages[].revision` being `null` | The page is rendered rather than hashed, so Licentry cannot say whether it moved. Report it as unknown. Never treat it as unchanged, and never invent a revision for it. `revisionNote` beside it says why. |
+| `warnings` | Defects Licentry found in its own manifest at build time. A non-empty array on a live manifest is a Licentry side problem: say so, name the entries, and carry on only if none of them names a page you need. |
 | `pages[].requiredBy` | Which commands must read this page. A command that skipped one of its own required pages has not finished. |
 | `pages[].mustContain` | Short literal strings that appear on the real page. This is how a fetch is checked. |
 | `pages[].sections` | Anchors within a large page, so a command can read it in parts without losing anything. |

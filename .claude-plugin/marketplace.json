@@ -1,0 +1,34 @@
+{
+  "name": "licentry",
+  "owner": {
+    "name": "Licentry",
+    "email": "support@licentry.cc",
+    "url": "https://licentry.cc"
+  },
+  "metadata": {
+    "description": "Official Licentry plugins for Claude Code.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "licentry-integrate",
+      "source": "./",
+      "description": "Integrate Licentry licensing into your product: read the live docs, survey the codebase, write the client, turn the product controls on in a safe order, and audit what is already there.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Licentry",
+        "email": "support@licentry.cc"
+      },
+      "homepage": "https://licentry.cc/docs",
+      "repository": "https://github.com/ForeigndevX/licentry-integrate",
+      "license": "Apache-2.0",
+      "category": "development",
+      "keywords": [
+        "licensing",
+        "anti-piracy",
+        "tamper-resistance",
+        "licentry"
+      ]
+    }
+  ]
+}
